@@ -87,6 +87,7 @@ const ProductCard = ({ url }) => (
 );
 
 const Products = () => (
+
   <div className="mt-12">
     <div className="container">
       {items.map((item) => (

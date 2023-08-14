@@ -1,7 +1,7 @@
 import { Card } from "antd";
 const { Meta } = Card;
 
-const items = [
+const items_list = [
   {
     category: "Top Offers",
     items: [
@@ -33,7 +33,7 @@ const items = [
     ],
   },
   {
-    category: "Best deals",
+    category: "Fragrance",
     items: [
       {
         key: 0,
@@ -60,6 +60,11 @@ const items = [
         url: "https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F2c%2F91%2F2c916835024d8f6cf56292cdc738a7da870fd4cf.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bladies_accessories_belts%5D%2Ctype%5BDESCRIPTIVEDETAIL%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D",
         title: "Belt",
       },
+      {
+        key: 5,
+        url: "https://m.media-amazon.com/images/I/91Xhzn4NGnL._AC_UY1000_.jpg",
+        title: "Brown bag",
+      },
     ],
   },
 ];
@@ -78,23 +83,44 @@ const ProductCard = ({ url, title }) => (
   </Card>
 );
 
-const Products = () => (
-  <div>
-    {items.map((item) => {
-      return (
-        <div key={item.category}>
-          <span className="ml-8 float-left font-bold">{item.category}</span>
-          <div className="mt-12">
-            <div className="container">
-              {item.items.map((item) => (
-                <ProductCard key={item.key} url={item.url} title={item.title} />
-              ))}
+const Products = ({ suggestedCategory }) => {
+  const items = suggestedCategory
+    ? items_list.filter(function (el) {
+        return el.category === suggestedCategory;
+      })
+    : items_list;
+  return (
+    <div>
+      {items.map((item) => {
+        return (
+          <div key={item.category}>
+            <span
+              className={
+                suggestedCategory
+                  ? "predicted-category ml-8 mb-2 float-left"
+                  : "ml-8 mb-2 float-left font-bold"
+              }
+            >
+              {suggestedCategory
+                ? "Suggested Products By Our A.I. Model: " + suggestedCategory
+                : item.category}
+            </span>
+            <div className="mt-12">
+              <div className="container">
+                {item.items.map((item) => (
+                  <ProductCard
+                    key={item.key}
+                    url={item.url}
+                    title={item.title}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      );
-    })}
-  </div>
-);
+        );
+      })}
+    </div>
+  );
+};
 
 export default Products;

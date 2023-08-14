@@ -31,3 +31,33 @@
 .select-container.ant-form-item-control-wrapper {
   width: 100%;
 }
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+.predicted-category {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: -webkit-linear-gradient(
+    135deg,
+    #6bc5f8,
+    #cf59e6,
+    #6bc5f8,
+    #cf59e6
+  );
+  background: linear-gradient(-45deg, #6bc5f8, #cf59e6, #6bc5f8, #cf59e6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  -webkit-animation: gradient 3s ease infinite;
+  animation: gradient 3s ease infinite;
+}

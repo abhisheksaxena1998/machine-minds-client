@@ -33,7 +33,7 @@ const items_list = [
     ],
   },
   {
-    category: "Fragrance",
+    category: "Top Deals",
     items: [
       {
         key: 0,

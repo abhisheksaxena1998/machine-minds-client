@@ -9,7 +9,9 @@ import { Badge } from "antd";
 const NavBar = () => {
   return (
     <nav>
-      <img src={logo} alt="Your SVG" className="w-48 -ml-4" />
+      <a href="/">
+        <img src={logo} alt="Your SVG" className="w-48 -ml-4" />
+      </a>
       <div className="w-full flex justify-between flex-row-reverse items-center max-w-7xl mx-auto">
         <ul className="flex list-none hidden sm:flex flex-row-reverse gap-10 -mt-36">
           <li>

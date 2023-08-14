@@ -24,10 +24,13 @@ function App() {
         setSuggestedCategory={setSuggestedCategory}
       />
       {showFilters && (
-        <Filters
-          allCategories={allCategories}
-          setSuggestedCategories={setSuggestedCategories}
-        />
+        <>
+          <div className="text-left ml-8 font-semibold -mb-7 mt-4">Filters</div>
+          <Filters
+            allCategories={allCategories}
+            setSuggestedCategories={setSuggestedCategories}
+          />
+        </>
       )}
       <Products
         suggestedCategory={suggestedCategory}

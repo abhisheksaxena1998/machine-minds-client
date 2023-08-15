@@ -15,7 +15,7 @@ function App() {
     "Top Offers",
   ]);
   const [showFilters, setShowFilters] = useState(true);
-
+  
   return (
     <Provider store={store}>
       <NavBar />

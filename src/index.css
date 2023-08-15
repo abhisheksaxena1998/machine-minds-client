@@ -61,3 +61,12 @@
   -webkit-animation: gradient 3s ease infinite;
   animation: gradient 3s ease infinite;
 }
+.assured-products {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.assured-icon {
+  margin-left: 0.25rem;
+  color: lightseagreen;
+}

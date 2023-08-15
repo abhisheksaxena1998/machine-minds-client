@@ -1,5 +1,6 @@
 import { Card } from "antd";
 import { useEffect } from "react";
+import { CheckCircleOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
 
@@ -1405,7 +1406,16 @@ const ProductCard = ({ url, title }) => (
     }}
     cover={<img alt="example" src={url} />}
   >
-    <Meta className="text-left" title={title} description="www.instagram.com" />
+    <Meta
+      className="text-left"
+      title={title}
+      description={
+        <div className="assured-products">
+          <span>MindMart Assured</span>
+          <CheckCircleOutlined className="assured-icon" />
+        </div>
+      }
+    />
     <div className="price-tag">₹ 999XX</div>
   </Card>
 );

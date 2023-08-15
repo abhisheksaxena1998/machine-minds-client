@@ -3,7 +3,6 @@ import { Input, Space, Button, Tag, Image, Spin, notification, Steps, Result } f
 import { useSubmitDataMutation } from "../store/api";
 import { useRef, useState, useEffect } from "react";
 import { LoadingOutlined } from "@ant-design/icons";
-import cogoToast from 'cogo-toast';
 
 const { Search } = Input;
 

@@ -1,5 +1,11 @@
 ### MindMart's Frontend
 
+### Link to Backend:
+https://github.com/abhisheksaxena1998/Machine-Minds-Backend
+
+### Link to Image Classifier:
+
+https://github.com/abhisheksaxena1998/Machine-Minds-Image-Classifier
 
 ![image](https://github.com/abhisheksaxena1998/machine-minds-client/assets/44598815/6d4fafd6-07c1-45d8-bc32-33a9f398cdd4)
 
